@@ -42,6 +42,14 @@ public class Main {
                         System.out.println("Student not found.");
                         break;
                     }
+
+                    System.out.print("Enter course code: ");
+                    String courseCode = scanner.nextLine();
+                    Course course = courseDatabase.findCourseByCode(courseCode);
+                    if (course == null) {
+                        System.out.println("Course not found.");
+                        break;
+                    }
                 }
         }
     }
