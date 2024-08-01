@@ -100,6 +100,27 @@ public class Main {
                         System.out.println("Invalid name. It should contain only alphabets and spaces, and at least 3 alphabets.");
                         break;
                     }
+
+                    if (studentDatabase.isStudentRegistered(newStudentID, newStudentName)) {
+                        System.out.println("You are already enrolled with us.");
+                    } else {
+                        Student newStudent = new Student(newStudentID, newStudentName);
+                        studentDatabase.addStudent(newStudent);
+
+                        System.out.print("Enrollment successful. Now enter course code to register: ");
+                        String newCourseCode = scanner.nextLine();
+                        Course newCourse = courseDatabase.findCourseByCode(newCourseCode);
+
+                        if (newCourse == null) {
+                            System.out.println("Course not found.");
+                        } else if (newStudent.registerForCourse(newCourse)) {
+                            System.out.println("Registration successful.");
+                        } else {
+                            System.out.println("Registration failed. Course may be full or you have reached the limit of 2 subjects.");
+                        }
+                    }
+                    break;
+
                 }
         }
     }
