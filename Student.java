@@ -38,4 +38,13 @@ public class Student {
         }
         return false;
     }
+
+    // Method to drop a course the student has registered for
+    public boolean dropCourse(Course course) {
+        if (registeredCourses.remove(course)) {
+            course.removeStudent(this);
+            return true;
+        }
+        return false;
+    }
 }
