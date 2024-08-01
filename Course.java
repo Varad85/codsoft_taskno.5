@@ -58,4 +58,9 @@ public class Course {
         }
         return false;
     }
+
+    // Method to remove a student from the course
+    public boolean removeStudent(Student student) {
+        return registeredStudents.remove(student);
+    }
 }
