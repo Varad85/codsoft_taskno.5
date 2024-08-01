@@ -47,4 +47,14 @@ public class Student {
         }
         return false;
     }
+
+    // Validates student ID
+    public static boolean isValidStudentID(String studentID) {
+        return studentID.matches("s\\d{3}");
+    }
+
+    // Validates student name
+    public static boolean isValidName(String name) {
+        return name.matches("[a-zA-Z ]{3,}") && name.replaceAll("[^a-zA-Z]", "").length() >= 3;
+    }
 }
