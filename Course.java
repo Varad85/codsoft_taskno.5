@@ -19,4 +19,29 @@ public class Course {
         this.schedule = schedule;
         this.registeredStudents = new ArrayList<>();
     }
+
+    // Getter methods for course details
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public List<Student> getRegisteredStudents() {
+        return registeredStudents;
+    }
 }
