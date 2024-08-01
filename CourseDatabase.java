@@ -19,4 +19,14 @@ public class CourseDatabase {
     public List<Course> getCourses() {
         return courses;
     }
+
+    // Method to find a course by its course code
+    public Course findCourseByCode(String courseCode) {
+        for (Course course : courses) {
+            if (course.getCourseCode().equals(courseCode)) {
+                return course;
+            }
+        }
+        return null;
+    }
 }
