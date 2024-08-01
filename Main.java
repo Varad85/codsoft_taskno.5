@@ -32,6 +32,16 @@ public class Main {
                         System.out.println(course.getCourseCode() + ": " + course.getTitle() + " (" + course.getRegisteredStudents().size() + "/" + course.getCapacity() + " slots filled)");
                     }
                     break;
+
+                    case 2:
+                    // Register for a course
+                    System.out.print("Enter student ID: ");
+                    String studentID = scanner.nextLine();
+                    Student student = studentDatabase.findStudentByID(studentID);
+                    if (student == null) {
+                        System.out.println("Student not found.");
+                        break;
+                    }
                 }
         }
     }
