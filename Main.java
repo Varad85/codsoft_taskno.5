@@ -85,6 +85,21 @@ public class Main {
                     }
                     break;
 
+                    case 4:
+                    // New user registration
+                    System.out.print("Enter new student ID: ");
+                    String newStudentID = scanner.nextLine();
+                    if (!Student.isValidStudentID(newStudentID)) {
+                        System.out.println("Invalid student ID. It should start with 's' followed by exactly 3 digits.");
+                        break;
+                    }
+
+                    System.out.print("Enter new student name: ");
+                    String newStudentName = scanner.nextLine();
+                    if (!Student.isValidName(newStudentName)) {
+                        System.out.println("Invalid name. It should contain only alphabets and spaces, and at least 3 alphabets.");
+                        break;
+                    }
                 }
         }
     }
