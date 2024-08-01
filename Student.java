@@ -13,4 +13,16 @@ public class Student {
         this.name = name;
         this.registeredCourses = new ArrayList<>();
     }
+    // Getter methods for student details
+    public String getStudentID() {
+        return studentID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Course> getRegisteredCourses() {
+        return registeredCourses;
+    }
 }
