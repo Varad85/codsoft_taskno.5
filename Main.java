@@ -23,6 +23,16 @@ public class Main {
             System.out.print("Select an option: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
+
+            switch (choice) {
+                case 1:
+                    // List all courses
+                    System.out.println("Available Courses:");
+                    for (Course course : courseDatabase.getCourses()) {
+                        System.out.println(course.getCourseCode() + ": " + course.getTitle() + " (" + course.getRegisteredStudents().size() + "/" + course.getCapacity() + " slots filled)");
+                    }
+                    break;
+                }
         }
     }
 }
