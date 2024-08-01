@@ -44,4 +44,18 @@ public class Course {
     public List<Student> getRegisteredStudents() {
         return registeredStudents;
     }
+
+    // Method to check if there is an available slot for the course
+    public boolean hasAvailableSlot() {
+        return registeredStudents.size() < capacity;
+    }
+
+    // Method to register a student for the course
+    public boolean registerStudent(Student student) {
+        if (hasAvailableSlot()) {
+            registeredStudents.add(student);
+            return true;
+        }
+        return false;
+    }
 }
