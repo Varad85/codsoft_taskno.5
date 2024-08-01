@@ -57,4 +57,9 @@ public class Student {
     public static boolean isValidName(String name) {
         return name.matches("[a-zA-Z ]{3,}") && name.replaceAll("[^a-zA-Z]", "").length() >= 3;
     }
+
+    // Checks if another student has the same ID or name
+    public boolean hasSameDetails(String studentID, String name) {
+        return this.studentID.equals(studentID) || this.name.equalsIgnoreCase(name);
+    }
 }
