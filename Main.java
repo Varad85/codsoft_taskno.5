@@ -12,5 +12,17 @@ public class Main {
         courseDatabase.addCourse(new Course("CS103", "Algorithms", "Introduction to algorithms", 10, "Fri 9-11AM"));
         courseDatabase.addCourse(new Course("CS104", "Operating Systems", "Introduction to operating systems", 10, "Mon 1-3PM"));
         courseDatabase.addCourse(new Course("CS105", "Database Systems", "Introduction to database systems", 10, "Wed 1-3PM"));
+    
+        while (true) {
+            System.out.println("Course Registration System:");
+            System.out.println("1. List Courses");
+            System.out.println("2. Register for Course(for enrolled users)");
+            System.out.println("3. Drop Course");
+            System.out.println("4. New User Enrollment");
+            System.out.println("5. Exit");
+            System.out.print("Select an option: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+        }
     }
 }
