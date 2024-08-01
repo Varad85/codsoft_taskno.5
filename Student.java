@@ -31,5 +31,11 @@ public class Student {
             System.out.println("Sorry, you have reached the limit. You can select a maximum of 2 subjects.");
             return false;
         }
+
+        if (course.registerStudent(this)) {
+            registeredCourses.add(course);
+            return true;
+        }
+        return false;
     }
 }
