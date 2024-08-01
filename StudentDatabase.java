@@ -24,4 +24,13 @@ public class StudentDatabase {
         }
         return null;
     }
+
+    public boolean isStudentRegistered(String studentID, String name) {
+        for (Student student : students) {
+            if (student.hasSameDetails(studentID, name)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
