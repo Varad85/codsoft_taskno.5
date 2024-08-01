@@ -14,4 +14,9 @@ public class CourseDatabase {
     public void addCourse(Course course) {
         courses.add(course);
     }
+
+    // Method to get a list of all courses
+    public List<Course> getCourses() {
+        return courses;
+    }
 }
