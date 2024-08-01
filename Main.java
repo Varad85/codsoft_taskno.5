@@ -50,6 +50,15 @@ public class Main {
                         System.out.println("Course not found.");
                         break;
                     }
+
+                    if (student.getRegisteredCourses().contains(course)) {
+                        System.out.println("You are already registered for this course.");
+                    } else if (student.registerForCourse(course)) {
+                        System.out.println("Registration successful.");
+                    } else {
+                        System.out.println("Registration failed. Course may be full or you have reached the limit of 2 subjects.");
+                    }
+                    break;
                 }
         }
     }
