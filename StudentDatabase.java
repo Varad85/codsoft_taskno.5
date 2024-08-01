@@ -15,4 +15,13 @@ public class StudentDatabase {
     public List<Student> getStudents() {
         return students;
     }
+
+    public Student findStudentByID(String studentID) {
+        for (Student student : students) {
+            if (student.getStudentID().equals(studentID)) {
+                return student;
+            }
+        }
+        return null;
+    }
 }
