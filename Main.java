@@ -59,6 +59,32 @@ public class Main {
                         System.out.println("Registration failed. Course may be full or you have reached the limit of 2 subjects.");
                     }
                     break;
+
+                    case 3:
+                    // Drop a course
+                    System.out.print("Enter student ID: ");
+                    studentID = scanner.nextLine();
+                    student = studentDatabase.findStudentByID(studentID);
+                    if (student == null) {
+                        System.out.println("Student not found.");
+                        break;
+                    }
+
+                    System.out.print("Enter course code: ");
+                    courseCode = scanner.nextLine();
+                    course = courseDatabase.findCourseByCode(courseCode);
+                    if (course == null) {
+                        System.out.println("Course not found.");
+                        break;
+                    }
+
+                    if (student.dropCourse(course)) {
+                        System.out.println("Course dropped successfully.");
+                    } else {
+                        System.out.println("Failed to drop course. You might not be registered for this course.");
+                    }
+                    break;
+
                 }
         }
     }
