@@ -25,4 +25,11 @@ public class Student {
     public List<Course> getRegisteredCourses() {
         return registeredCourses;
     }
+
+    public boolean registerForCourse(Course course) {
+        if (registeredCourses.size() >= 2) {
+            System.out.println("Sorry, you have reached the limit. You can select a maximum of 2 subjects.");
+            return false;
+        }
+    }
 }
