@@ -121,6 +121,15 @@ public class Main {
                     }
                     break;
 
+                    case 5:
+                    // Exit the program
+                    System.out.println("Exiting the system.");
+                    scanner.close();
+                    return;
+
+                default:
+                    System.out.println("Invalid option. Please try again.");
+
                 }
         }
     }
